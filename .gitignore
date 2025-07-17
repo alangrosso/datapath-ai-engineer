@@ -143,6 +143,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+venv-ai/
 
 # Spyder project settings
 .spyderproject
@@ -205,3 +206,10 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# Keys
+01-open-ai-assistant/.env
+01-open-ai-assistant/openai-assistant-agr.json
+01-open-ai-assistant/src/.env
+01-open-ai-assistant/src/openai-assistant-agr.json
+
