@@ -273,7 +273,12 @@ Importante:
 
 Verificar que las tareas planificadas se hayan ejecutado adecuadamente: `images`.
 
+![alt text][Open AI]
+[Open AI]: images/01-openai-assistant-agr.PNG
+
 ![Open AI](images/01-openai-assistant-agr.PNG)
+
+<img src="images/01-openai-assistant-agr.PNG" alt="Open AI" width="500"/>
 
 ![App](images/02-openai-assistant-agr.PNG)
 
