@@ -88,6 +88,7 @@ Nota: token temporal (servicio gratuito): solo dura 24 horas
 ### Google Sheets
 
 Crear sheet en Drive
+
     Identificar ID de Google Sheet
     Utilizar archivo json que se generó al crear Cuenta de Servicio: NOMBRE_ARCHIVO.json
     Si tenemos error, en proyecto GCP:
@@ -101,7 +102,7 @@ Verificar tools e integración con Open AI:
 
     notebooks/test-functions.ipynb
 
-## Plattform OpenAI
+## OpenAI Platform
 
 De acuerdo a las pruebas realizadas en notebook, verificar que se haya creado el asistente con sus respectivas funciones.
 
@@ -109,13 +110,14 @@ De acuerdo a las pruebas realizadas en notebook, verificar que se haya creado el
 
 Nota: también se puede crear en web.
 
-Se creó asistente en notebook. Obtener ASSISTANT_ID y guardar en .env.
+Se creó asistente en notebook. Obtener ASSISTANT_ID y guardar en `.env`.
 
 Consideraciones:
-- File Research: fuente de conocimiento
+
+- File Research: fuente de conocimiento.
 - El asistente tendrá esta información como referencia para responder preguntas.
 
-Probar aplicación en web: Playground
+Probar aplicación en web: Playground.
 
 ## Configuración para ejecutar en Cloud
 
@@ -123,13 +125,11 @@ Probar aplicación en web: Playground
 
 Files:
 
-- Directorio oculto, sistema minúsculo de Linux:
-devcontainer/devcontainer.json
+- Directorio oculto, sistema minúsculo de Linux: devcontainer/`devcontainer.json`.
 
-- Dockerfile en desarrollo:
-Dockerfile.dev
+- Dockerfile en desarrollo: `Dockerfile.dev`.
 
-- Contenedor
+- Contenedor.
 
 ```sh
 # Ejecutar contenedor
@@ -162,11 +162,11 @@ gcloud init
 
 ### Paso 3: Artifact Registry API
 
-En GCP identificar servicio: ´Artifact Registry API´: Habilitar.
+En GCP identificar servicio: `Artifact Registry API`: Habilitar.
 
 ### Paso 4: Artifact Registry (Repository): creación del Repositorio en GCP
 
-En el proyecto creado ir a ´Artifact Registry´: verificar que no exista algún repositorio.
+En el proyecto creado ir a `Artifact Registry`: verificar que no exista algún repositorio.
 
 ```sh
 # Ejecutar en contenedor
@@ -180,7 +180,7 @@ Si se obtiene error: configurar permisos.
 
 ### Paso 5: Conteneder en Producción
 
-- Dockerfile en cloud (producción): Dockerfile.prod.
+- Dockerfile en cloud (producción).
 
 ```sh
 # actualizar puerto si está ocupado
@@ -190,13 +190,13 @@ Dockerfile.prod
 requirements.txt
 
 # actualizar ficheros
-src/main.py 
-src/streamlite_page.py
+src/utils.py
+src/app.py
 ```
 
 ### Paso 6: Crear el contenedor en cloud
 
-Crear imagen dentro de contenedor: cloudbuild.yaml.
+Crear imagen dentro de contenedor.
 
 ```sh
 # actualizar:
@@ -244,10 +244,11 @@ docker cp . NOMBRE_CONTENEDOR:/ws/code/.
 ## **Despliegue en GCP/GCR**
 
 Verificar paths de files: 
-    src/utils.py
-    src/app.py
 
 ```sh
+src/utils.py
+src/app.py
+
 # Crear la imagen y subir en repositorio
 # Ejecutar en contenedor
 gcloud builds submit --config=cloudbuild.yaml --project PROYECTO_ID
@@ -274,29 +275,15 @@ Verificar que las tareas planificadas se hayan ejecutado adecuadamente: `images`
 
 ![Open AI](images/01-openai-assistant-agr.PNG)
 
-![Open AI](https://github.com/alangrosso/datapath-ai-engineer/blob/dev/01-openai-assistant/images/01-openai-assistant-agr.PNG)
+![App](images/02-openai-assistant-agr.PNG)
 
-![](https://github.com/alangrosso/datapath-ai-engineer/blob/dev/01-openai-assistant/images/01-openai-assistant-agr.PNG)
+![Front End](images/03-openai-assistant-agr.PNG)
 
-![](https://github.com/alangrosso/datapath-ai-engineer/blob/dev/01-openai-assistant/images/02-openai-assistant-agr.PNG)
+![Integración Gmail](images/04-openai-assistant-agr.PNG)
 
-```sh
+![Integración WhatsApp](images/05-openai-assistant-agr.PNG)
 
-```
-
-### 
-
-## ****
-
-```sh
-
-```
-
-### 
-
-```sh
-
-```
+![Integración Google Sheets](images/06-openai-assistant-agr.PNG)
 
 ## **Github**
 
@@ -317,8 +304,3 @@ git push origin dev
 git checkout main
 git merge dev -m "merge dev sin conflictos"
 ```
-
-Link del repo:
-
-    https://github.com/alangrosso/datapath-ai/tree/dev/01-open-ai-assistant
-    https://github.com/alangrosso/datapath-ai/tree/main/01-open-ai-assistant
