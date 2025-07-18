@@ -1,0 +1,12 @@
+apiVersion: serving.knative.dev/v1
+kind: Service
+metadata:
+  name: servicio-openai-assistant-agr
+spec:
+  template:
+    spec:
+      containers:
+        - image: us-central1-docker.pkg.dev/agr-asistente-openai-v1/repo-asistente-openai-agr-v2/image-asistente-openai-agr-v2:latest
+          env:
+          ports:
+            - containerPort: 4000
