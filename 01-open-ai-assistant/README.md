@@ -275,29 +275,25 @@ Verificar que las tareas planificadas se hayan ejecutado adecuadamente: `images`
 
 `Open AI`
 
-![Open AI](images/01-openai-assistant-agr.PNG)
-
 <img src="images/01-openai-assistant-agr.PNG" alt="Open AI" width="600"/>
 
 `App`
 
-![App](images/02-openai-assistant-agr.PNG)
-
 <img src="images/02-openai-assistant-agr.PNG" alt="Open AI" width="600"/>
 
-![Front End](images/03-openai-assistant-agr.PNG)
+`Front End`
 
 <img src="images/03-openai-assistant-agr.PNG" alt="Open AI" width="600"/>
 
-![Integración Gmail](images/04-openai-assistant-agr.PNG)
+`Integración Gmail` 
 
 <img src="images/04-openai-assistant-agr.PNG" alt="Open AI" width="600"/>
 
-![Integración WhatsApp](images/05-openai-assistant-agr.PNG)
+`Integración WhatsApp`
 
 <img src="images/05-openai-assistant-agr.PNG" alt="Open AI" width="600"/>
 
-![Integración Google Sheets](images/06-openai-assistant-agr.PNG)
+`Integración Google Sheets`
 
 <img src="images/06-openai-assistant-agr.PNG" alt="Open AI" width="600"/>
 
@@ -320,3 +316,4 @@ git push origin dev
 git checkout main
 git merge dev -m "merge dev sin conflictos"
 ```
+7
